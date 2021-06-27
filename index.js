@@ -1,12 +1,10 @@
-'use strict';
-
-let api_key = require('./key.json');
+require('dotenv').config()
 
 const express = require('express');
 const {RtcTokenBuilder, RtcRole} = require('agora-access-token');
 
-const APP_ID = api_key["ID"];
-const APP_CERTIFICATE = api_key["CERTIFICATE"];
+const APP_ID = process.env.ID;
+const APP_CERTIFICATE = process.env.CERTIFICATE;
 
 const app = express();
 
